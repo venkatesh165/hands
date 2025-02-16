@@ -1,6 +1,12 @@
 import { supabase } from './supabase'
 
-type EventName = 'page_view' | 'app_download_clicked' | 'sign_in_clicked' | 'sign_out_clicked' | 'error_occurred' | 'web_vital'
+type EventName = 
+  | 'page_view' 
+  | 'app_download_clicked' 
+  | 'error_occurred' 
+  | 'web_vital'
+  | 'hero_section_viewed'
+  | 'download_section_viewed'
 
 type AnalyticsEvent = {
   name: EventName
@@ -38,6 +44,22 @@ export class Analytics {
     return this.track({
       name: 'app_download_clicked',
       properties: { platform },
+      userId
+    })
+  }
+
+  heroSectionViewed(userId?: string) {
+    return this.track({
+      name: 'hero_section_viewed',
+      properties: { timestamp: new Date().toISOString() },
+      userId
+    })
+  }
+
+  downloadSectionViewed(userId?: string) {
+    return this.track({
+      name: 'download_section_viewed',
+      properties: { timestamp: new Date().toISOString() },
       userId
     })
   }

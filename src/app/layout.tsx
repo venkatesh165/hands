@@ -22,14 +22,14 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://hustlersandseekers.co'),
-  title: 'Hustlers & Seekers',
-  description: 'Your Journey Starts Here',
+  title: 'Hustlers & Seekers - Connect, grow, and succeed',
+  description: 'Connect, grow, and succeed with a community that understands your journey',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://hustlersandseekers.co',
-    title: 'Hustlers & Seekers',
-    description: 'Your Journey Starts Here',
+    title: 'Hustlers & Seekers - Connect, grow, and succeed',
+    description: 'Connect, grow, and succeed with a community that understands your journey',
     siteName: 'Hustlers & Seekers',
   },
 }
@@ -41,7 +41,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${poppins.variable} font-sans`}>
+      <body className={`${inter.variable} ${poppins.variable} font-sans antialiased`}>
         <ErrorBoundary>
           <ThemeProvider>
             <Providers>

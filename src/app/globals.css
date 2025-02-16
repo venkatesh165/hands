@@ -51,13 +51,25 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .btn-download {
+    @apply inline-flex items-center justify-center rounded-lg bg-black px-6 py-2 text-white transition-colors hover:bg-gray-800;
   }
 }
 
 @layer utilities {
   .animated-fade-in {
+    @apply animate-fade-in opacity-0;
+  }
+  .animated-fade-up {
     @apply animate-fade-up opacity-0;
   }
 } 

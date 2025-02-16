@@ -11,16 +11,16 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
+          50: '#eef6ff',
+          100: '#d9eaff',
+          200: '#bcd9ff',
+          300: '#8ebfff',
+          400: '#5894ff',
+          500: '#4169E1',
+          600: '#2f51b3',
+          700: '#254191',
+          800: '#1f3576',
+          900: '#1c2d62',
         },
         background: {
           DEFAULT: 'hsl(var(--background))',
@@ -44,6 +44,10 @@ const config: Config = {
           '2xl': '1400px',
         },
       },
+      fontFamily: {
+        sans: ['var(--font-inter)'],
+        heading: ['var(--font-poppins)'],
+      },
       keyframes: {
         'fade-up': {
           '0%': {
@@ -55,9 +59,18 @@ const config: Config = {
             transform: 'translateY(0)',
           },
         },
+        'fade-in': {
+          '0%': {
+            opacity: '0',
+          },
+          '100%': {
+            opacity: '1',
+          },
+        },
       },
       animation: {
-        'fade-up': 'fade-up 0.5s ease-out',
+        'fade-up': 'fade-up 0.5s ease-out forwards',
+        'fade-in': 'fade-in 0.3s ease-out forwards',
       },
     },
   },
