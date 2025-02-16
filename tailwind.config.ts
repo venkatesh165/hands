@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        border: 'hsl(var(--border))',
         primary: {
           50: '#eef6ff',
           100: '#d9eaff',
@@ -71,6 +72,9 @@ const config: Config = {
       animation: {
         'fade-up': 'fade-up 0.5s ease-out forwards',
         'fade-in': 'fade-in 0.3s ease-out forwards',
+      },
+      borderColor: {
+        DEFAULT: 'hsl(var(--border))',
       },
     },
   },

@@ -23,6 +23,9 @@
     --ring: 222.2 84% 4.9%;
  
     --radius: 0.5rem;
+
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
   }
  
   .dark {
