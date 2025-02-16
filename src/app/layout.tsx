@@ -7,11 +7,13 @@ import { PerformanceMonitor } from '@/components/PerformanceMonitor'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 import './globals.css'
 
+// Load Inter font with CSS variable support
 const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-inter',
 })
 
+// Load Poppins font with CSS variable support for weights 600 and 700
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['600', '700'],
@@ -51,4 +53,4 @@ export default function RootLayout({
       </body>
     </html>
   )
-} 
+}

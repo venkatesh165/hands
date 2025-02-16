@@ -1,13 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-     eslint: {
-         ignoreDuringBuilds: true,
-     },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     domains: [
       'placehold.co',
       'apps.apple.com',
-      'play.google.com'
+      'play.google.com',
     ],
     formats: ['image/avif', 'image/webp'],
   },
@@ -17,6 +17,7 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+
   headers: async () => [
     {
       source: '/:path*',
@@ -46,4 +47,4 @@ const nextConfig = {
   ],
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;
