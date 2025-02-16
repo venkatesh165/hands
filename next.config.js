@@ -3,8 +3,10 @@ const nextConfig = {
   images: {
     domains: [
       'placehold.co',
-      'apps.apple.com',
+      'fonts.googleapis.com',
+      'fonts.gstatic.com',
       'play.google.com',
+      'developer.apple.com'
     ],
     formats: ['image/avif', 'image/webp'],
   },
