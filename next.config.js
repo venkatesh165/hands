@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   images: {
     domains: [
       'placehold.co',
@@ -16,6 +13,10 @@ const nextConfig = {
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
+  },
+
+  eslint: {
+    ignoreDuringBuilds: true, // Disable ESLint during builds
   },
 
   headers: async () => [
@@ -45,6 +46,6 @@ const nextConfig = {
       ],
     },
   ],
-}
+};
 
 module.exports = nextConfig;
