@@ -6,7 +6,9 @@ function render(ui: React.ReactElement, options = {}) {
   return rtlRender(ui, {
     wrapper: ({ children }) => (
       <ThemeProvider>
-        <Providers>{children}</Providers>
+        <Providers>
+        {typeof window !== "undefined" ? children : <div>{children}</div>}
+        </Providers>
       </ThemeProvider>
     ),
     ...options,

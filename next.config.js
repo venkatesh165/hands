@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['placehold.co'],
+    domains: [
+      'placehold.co',
+      'apps.apple.com',
+      'play.google.com'
+    ],
     formats: ['image/avif', 'image/webp'],
   },
   experimental: {
@@ -39,4 +43,4 @@ const nextConfig = {
   ],
 }
 
-module.exports = nextConfig 
+module.exports = nextConfig
